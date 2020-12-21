@@ -3,9 +3,10 @@ class Load{
 	public function viewHome($page){
 		include 'app/views/'.$page.'.php';
 	}
-	public function viewCat($page,$data=array()){
-//		if($data==true){
-//		}
+	public function viewCat($page,$data=false){
+	if($data==true){
+		extract($data);
+	}
 		include 'app/views/'.$page.'.php';
 	}
 	public function viewModel($model){
