@@ -14,5 +14,12 @@ class Database extends PDO{
 			return false;
 		}
 	}
+	public function insert($sql,$data=array()){
+		$stmt = $this->prepare($sql);
+			foreach($data as $key=>$value){
+				$stmt->bindValue($key,$value);
+			}		
+		return $stmt->execute();
+	}
 }
 ?>

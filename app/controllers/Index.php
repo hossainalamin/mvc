@@ -21,5 +21,14 @@ class Index extends Tcontroller{
 		$data['catbyid'] = $model->catById($table,$id);
 		$this->load->viewCat("catbyid",$data);
 	}
+	public function insertCatagory(){
+		$table = "tbl_catagory";
+		$data  = array(
+			'name'  => 'jewellry',
+			'title' => 'This is jewellry'
+		);
+		$model = $this->load->viewModel("Catagory");
+		$data['cat'] = $model->insertCatagory($table,$data);
+	}
 }
 ?>

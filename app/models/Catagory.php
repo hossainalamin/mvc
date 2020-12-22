@@ -12,5 +12,13 @@ class Catagory extends Dmodel{
 		$data = array(":id"=>$id);
 		return $this->con->select($sql,$data);
 	}
+	public function insertCatagory($table,$data=array()){
+		$sql = "INSERT into $table(name,title) VALUES(:name,:title)";
+		$data = array(":name" => $data['name'],
+		":title" => $data['title']
+	);
+		return $this->con->insert($sql,$data);
+	}
+
 }
 ?>
