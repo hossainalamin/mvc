@@ -1,6 +1,6 @@
 <?php 
 class Load{
-	public function viewHome($page){
+	public function view($page){
 		include 'app/views/'.$page.'.php';
 	}
 	public function viewCat($page,$data=false){

@@ -4,7 +4,7 @@ class Index extends Tcontroller{
 		parent::__construct();
 	}
 	public function home(){
-		$this->load->viewHome("home");
+		$this->load->view("home");
 	}
 	public function catagoryModel(){
 		$data = array();
@@ -21,14 +21,26 @@ class Index extends Tcontroller{
 		$data['catbyid'] = $model->catById($table,$id);
 		$this->load->viewCat("catbyid",$data);
 	}
+	public function addCatagory(){
+		$this->load->viewCat("addcat");
+	}
 	public function insertCatagory(){
+		$name=$_POST['name'];
+		$title=$_POST['title'];
 		$table = "tbl_catagory";
 		$data  = array(
-			'name'  => 'jewellry',
-			'title' => 'This is jewellry'
+			'name'  => $name,
+			'title' => $title
 		);
 		$model = $this->load->viewModel("Catagory");
-		$data['cat'] = $model->insertCatagory($table,$data);
+		$result = $model->insertCatagory($table,$data);
+		$mdata=array();
+		if($result==1){
+			$mdata['msg'] = "Catagory added successfully";
+		}else{
+			$mdata['msg'] = "Catagory not added";
+		}
+		$this->load->viewCat("addcat",$mdata);
 	}
 }
 ?>
