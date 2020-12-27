@@ -21,5 +21,15 @@ class Database extends PDO{
 			}		
 		return $stmt->execute();
 	}
+	public function update($sql,$data=array()){
+		$stmt = $this->prepare($sql);
+			foreach($data as $key=>$value){
+				$stmt->bindValue($key,$value);
+			}		
+		return $stmt->execute();
+	}
+	public function delete($sql){
+		return $this->exec($sql);
+	}
 }
 ?>

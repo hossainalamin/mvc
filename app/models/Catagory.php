@@ -19,6 +19,18 @@ class Catagory extends Dmodel{
 	);
 		return $this->con->insert($sql,$data);
 	}
+	public function updateCatagory($table,$data,$con){
+		$sql = "UPDATE $table set name=:name,title=:title where $con";
+		$data = array(
+			":name" =>$data['name'], 
+			":title" =>$data['title']
+		);
+		return $this->con->update($sql,$data);
+	}
+	public function deleteCatagory($table,$con){
+		$sql = "DELETE from $table where $con";
+		return $this->con->delete($sql);
+	}
 
 }
 ?>

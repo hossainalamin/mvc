@@ -1,9 +1,7 @@
 <?php
-include_once "system/libs/Main.php";
-include_once "system/libs/Load.php";
-include_once "system/libs/Dmodel.php";
-include_once "system/libs/Database.php";
-include_once "system/libs/Tcontroller.php";
+spl_autoload_register(function($class){
+	include_once "system/libs/".$class.".php";
+});
 $url = isset($_GET['url'])?$_GET['url']:NULL;
 if($url != null ){
 	$url = rtrim($url,'/');

@@ -47,7 +47,7 @@ if(isset($msg)){
 }
 ?>
 <br>
-<form action="http://localhost/mvc/Index/insertCatagory" method="post">
+<form action="http://localhost/mvc/CatController/insertCatagory" method="post">
 <table>
 <tr>
 <td>Name:</td>
