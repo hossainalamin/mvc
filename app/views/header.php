@@ -27,33 +27,19 @@ table.tblone tr:nth-child(2n){background:#fdf0f1;height:30px;}
 
 input[type="text"] {border:1px solid #ddd;margin-bottom:5px;padding:5px;width:228px;font-size:16px}
 input[type="submit"]{cursor: pointer}
-
+.postcontent{width: 561px;border-right: 1px solid #ddd;float: left;margin-right: 18px;padding-right: 20px;overflow: hidden;}
+.post{ margin-bottom: 40px;}
+.post h2{border-bottom: 1px dashed #ddd; margin: 0px; padding-bottom:10px;}
+.post h2 a{text-decoration: none; color:black;}
+.readmore{float:right;}
+.sidebar{ width:218px;float:right;overflow: hidden;}
+.widget{ margin-bottom: 20px;}
+.widget h2 {border: 1px solid #ddd;margin:0 0 10px;padding:4px 10px}
+.widget ul {margin:0px;padding:0px;list-style: none;}
+.widget ul li a{text-decoration: none; background:#177de3;display:block; color:white;margin-bottom: 1px; padding: 5px;}
+.widget ul li a:hover{background:#3aa0ff;}
 .footeroption{height:90px;background:#177de3;overflow:hidden;padding-top:10px;}
 .footerone {background: #3aa0ff;border-radius: 5px;float: left;font-size:18px;line-height:23px;margin-left: 10px;padding:6px 10px;text-align:center;text-shadow: 1px 0 2px #fff;width:390px;overflow: hidden;}
 .footerone p{margin:0;}
 </style>
 </head>
-<body>
-  <header class="headeroption">
-    <h2>Advanced PHP OOP Tutorial [MVC Framework]</h2>
-	
-  </header>
-<div class="content">
-<p>This is from home.</p>
-</div>
-  <footer class="footeroption">
-	  <section class="footerone">
-	  <p>Delowar Jahan Imran</p>
-	  <p>Oracle Certified Professional,</p>
-	  <p>Java SE 6 Programmer</p>
-	  
-	  </section>
-	  <section class="footerone">
-		  <p>Like us: facebook.com/ProDelowar</p>
-		  <p>Join us: facebook.com/groups/PBPTBD</p>
-		  <p>Web: www.trainingWithLiveProject.com</p>
-	  </section>
-  </footer>
-
-</body>
-</html>
