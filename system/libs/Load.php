@@ -3,7 +3,7 @@ class Load{
 	public function view($page){
 		include 'app/views/'.$page.'.php';
 	}
-	public function viewCat($page,$data=false){
+	public function viewCat($page,$data=array()){
 	if($data==true){
 		extract($data);
 	}

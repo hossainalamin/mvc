@@ -21,6 +21,14 @@ class CatController extends Tcontroller{
 	public function addCatagory(){
 		$this->load->viewCat("addcat");
 	}
+	public function upCatagory(){
+		$data = array();
+		$table = "tbl_catagory";
+		$id=21;
+		$model = $this->load->viewModel("Catagory");
+		$data['upcatbyid'] = $model->catById($table,$id);
+		$this->load->viewCat("upcate",$data);
+	}
 	public function insertCatagory(){
 		$name=$_POST['name'];
 		$title=$_POST['title'];
@@ -40,14 +48,24 @@ class CatController extends Tcontroller{
 		$this->load->viewCat("addcat",$mdata);
 	}
 	public function updateCatagory(){
+		$name=$_POST['name'];
+		$title=$_POST['title'];
+		$id=$_POST['id'];
 		$table = "tbl_catagory";
-		$con   = "id=2";
+		$con   = "id=$id";
 		$data=array(
-			"name" =>  "cosmetics",
-			"title"=> "Indian cosmetics"
+			"name" =>  "$name",
+			"title"=> "$title"
 		); 
 		$model = $this->load->viewModel("Catagory");
 		$result = $model->updateCatagory($table,$data,$con);
+		$mdata=array();
+		if($result==1){
+			$mdata['msg'] = "Catagory updated successfully";
+		}else{
+			$mdata['msg'] = "Catagory not updated";
+		}
+		$this->load->viewCat("upcate",$mdata);
 	}
 	public function deleteCatById(){
 		$table = "tbl_catagory";
