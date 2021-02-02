@@ -9,6 +9,12 @@ class Load{
 	}
 		include 'app/views/'.$page.'.php';
 	}
+	public function viewPost($page,$data=array()){
+		if($data==true){
+			extract($data);
+		}
+			include 'app/views/'.$page.'.php';
+	}
 	public function viewModel($model){
 		include 'app/models/'.$model.'.php';
 		return new $model();

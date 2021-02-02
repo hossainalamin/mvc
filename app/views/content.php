@@ -1,15 +1,21 @@
-<body>
-  <header class="headeroption">
-    <h2>Advanced PHP OOP Tutorial [MVC Framework]</h2>
-	
-  </header>
-<div class="content">
 home
 <hr>
 <article class="postcontent">
+<?php 
+	foreach($post as $value){
+?>
 <div class="post">
-<h2><a href="#">Post title</a></h2>
-<p>Post content will be here....</p>
-<div class="readmore"><a href="#"> readmore</a></div>
+<h2><a href="<?php echo base_url;?>/Index/PostDetail/<?php echo $value['id']; ?>"><?php echo $value['title'];?></a></h2>
+<p>
+<?php
+ $text = $value['content'];
+ if(strlen($text)>200){
+   $text = substr($text,0,200);
+   echo $text."..";
+ }
+ ?>
+</p>
+<div class="readmore"><a href="<?php echo base_url;?>/Index/PostDetail/<?php echo $value['id']; ?>"> readmore</a></div>
 </div>
+<?php } ?>
 </article>

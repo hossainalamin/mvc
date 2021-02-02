@@ -5,9 +5,17 @@ class Index extends Tcontroller{
 	}
 	public function home(){
 		$this->load->view("header");
-		$this->load->view("content");
+		$data = array();
+		$table = "tbl_post";
+		$model = "PostModel";
+		$post_model   = $this->load->viewModel($model);
+		$data['post'] = $post_model->PostList($table);
+		$this->load->viewPost("content",$data);
 		$this->load->view("sidebar");
 		$this->load->view("footer");
+	}
+	public function PostDitail(){
+		
 	}
 }
 ?>
