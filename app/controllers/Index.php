@@ -14,8 +14,20 @@ class Index extends Tcontroller{
 		$this->load->view("sidebar");
 		$this->load->view("footer");
 	}
-	public function PostDitail(){
-		
+	public function PostDetail($id){
+		$this->load->view("header");
+		$data = array();
+		$table_post = "tbl_post";
+		$table_catagory = "tbl_catagory";
+		$model = "PostModel";
+		$post_model   = $this->load->viewModel($model);
+		$data['postbyid'] = $post_model->GetPostById($table_post,$table_catagory,$id);
+		$this->load->viewPost("detail",$data);
+		$this->load->view("sidebar");
+		$this->load->view("footer");
+	}
+	public function PostByCat(){
+
 	}
 }
 ?>
