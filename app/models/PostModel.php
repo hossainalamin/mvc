@@ -10,6 +10,10 @@ class PostModel extends Dmodel{
     function GetPostById($table_post,$table_catagory,$id){
         $sql = "SELECT $table_post.*,$table_catagory.name from $table_post inner join $table_catagory on $table_post.cat = $table_catagory.id where $table_post.id = $id";
         return $this->con->select($sql);
-}
+    }
+    public function GetPostByCat($table_post,$table_catagory,$id){
+        $sql = "SELECT $table_post.*,$table_catagory.name from $table_post inner join $table_catagory on $table_post.cat = $table_catagory.id where $table_catagory.id = $id";
+        return $this->con->select($sql);
+    }
 }
 ?>

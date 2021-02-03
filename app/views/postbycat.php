@@ -1,11 +1,12 @@
-home
+Post By Catagory
 <hr>
 <article class="postcontent">
 <?php 
-	foreach($post as $value){
+	foreach($postbycat as $value){
 ?>
 <div class="post">
-<h2><a href="<?php echo base_url;?>/Index/PostDetail/<?php echo $value['id']; ?>"><?php echo $value['title'];?></a></h2>
+<h2><?php echo $value['title'];?></h2>
+<h4>Catagory: <?php echo $value['name'];?></h4>
 <p>
 <?php
  $text = $value['content'];
@@ -13,7 +14,7 @@ home
    $text = substr($text,0,200);
    echo $text."..";
  }else{
-  echo $text;
+   echo $text;
  }
  ?>
 </p>
