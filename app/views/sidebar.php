@@ -2,17 +2,21 @@
 <div class="widget">
 <h2>Catagory</h2>
 <ul>
-	<li><a href="#">Catagory one</a></li>
-	<li><a href="#">Catagory two</a></li>
-	<li><a href="#">Catagory three</a></li>
-	<li><a href="#">Catagory four</a></li>
+<?php
+ foreach($cat as $data){
+?>
+	<li><a href="<?php echo base_url;?>/Index/PostByCat/<?php echo $data['id'];?>"><?php echo $data['name'];?></a></li>
+<?php } ?>
 </ul>
 </div>
 <div class="widget">
 <h2>Latest Post</h2>
 <ul>
-	<li><a href="#">Tilte of the post will be there</a></li>
-	<li><a href="#">Tilte of the post will be there</a></li>
+<?php
+ foreach($latestpost as $data){
+?>
+	<li><a href="<?php echo base_url;?>/Index/PostDetail/<?php echo $data['id'];?>"><?php echo $data['title'];?></a></li>
+<?php } ?>
 </ul>
 </div>
 </aside>

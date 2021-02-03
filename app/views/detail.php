@@ -1,4 +1,3 @@
-Detail
 <hr>
 <article class="postcontent">
 <?php 

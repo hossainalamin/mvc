@@ -38,6 +38,13 @@ input[type="submit"]{cursor: pointer}
 .widget ul {margin:0px;padding:0px;list-style: none;}
 .widget ul li a{text-decoration: none; background:#177de3;display:block; color:white;margin-bottom: 1px; padding: 5px;}
 .widget ul li a:hover{background:#3aa0ff;}
+
+.searchoption{margin-bottom: 15px; padding-bottom: 10px; overflow: hidden;}
+.menu{float:left; margin-top: 10px; font-size: 18px;}
+.menu a{text-decoration: none; background: #ddd; border: 1px solid #999; color:#000; padding: 5px 10px; border-radius: 5px;}
+.search{float: right;}
+.catsearch{border: 1px solid #ddd;margin-bottom: 5px;padding: 5px;width: 228px;font-size: 16px; cursor:pointer;}
+.submitbtn{font-size: 18px; padding: 3px 10px;}
 .footeroption{height:90px;background:#177de3;overflow:hidden;padding-top:10px;}
 .footerone {background: #3aa0ff;border-radius: 5px;float: left;font-size:18px;line-height:23px;margin-left: 10px;padding:6px 10px;text-align:center;text-shadow: 1px 0 2px #fff;width:390px;overflow: hidden;}
 .footerone p{margin:0;}

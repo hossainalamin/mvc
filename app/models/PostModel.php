@@ -15,5 +15,9 @@ class PostModel extends Dmodel{
         $sql = "SELECT $table_post.*,$table_catagory.name from $table_post inner join $table_catagory on $table_post.cat = $table_catagory.id where $table_catagory.id = $id";
         return $this->con->select($sql);
     }
+    public function LatestPostList($table){
+        $sql = "SELECT * from $table order by id limit 3";
+        return $this->con->select($sql);
+    }
 }
 ?>

@@ -1,4 +1,3 @@
-Post By Catagory
 <hr>
 <article class="postcontent">
 <?php 
