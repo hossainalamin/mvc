@@ -1,7 +1,7 @@
 <hr>
 <article class="postcontent">
 <?php 
-	foreach($post as $value){
+	foreach($postbysearch as $value){
 ?>
 <div class="post">
 <h2><a href="<?php echo base_url;?>/Index/PostDetail/<?php echo $value['id']; ?>"><?php echo $value['title'];?></a></h2>

@@ -19,5 +19,16 @@ class PostModel extends Dmodel{
         $sql = "SELECT * from $table order by id limit 3";
         return $this->con->select($sql);
     }
+    public function GetPostBySearch($table,$keyword,$id){
+        if(empty($keyword) && $id==0){
+            header('location:'.base_url.'/Index/home');
+        }
+        if(isset($keyword) && !empty($keyword)){
+        $sql = "SELECT * from $table where title like '%$keyword%' or content like '%$keyword%' and cat = '$id' order by id limit 3";
+        }elseif(isset($id)){
+            $sql = "SELECT * from $table where cat = '$id' order by id limit 3";
+        }
+        return $this->con->select($sql);
+    }
 }
 ?>

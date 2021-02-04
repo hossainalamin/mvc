@@ -1,0 +1,8 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.autoSave": "afterDelay",
+    "editor.fontSize": 16,
+    "editor.wordWrap": "on",
+    "explorer.confirmDelete": false
+}
