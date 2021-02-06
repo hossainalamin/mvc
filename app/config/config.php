@@ -1,3 +1,3 @@
 <?php
-define('base_url',"http://localhost/mvc");
+define("base_url","http://localhost/mvc");
 ?>
